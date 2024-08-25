@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Grupal 4</title>
+    <!--Bootstrap-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/styles.css">
+
+</head>
+
+<body>
+    <header>
+        <h1>Consulta del Clima por Ciudad</h1>
+    </header>
+
+    <div class="container border mt-5 p-3">
+        <form id="verClima">
+            <div class="form-group">
+                <input class="form-control" type="text" id="nombreCiudad" placeholder="Ingresa el nombre de la ciudad"
+                    required>
+                <input class="form-control" type="text" id="nombrePais" placeholder="Ingresa el nombre del País"
+                    required>
+            </div>
+            <button type="submit" class="btn btn-success">Consultar Clima</button>
+        </form>
+        <div id="infoClima" class="alert alert-success"></div>
+    </div>
+
+
+    <footer class="container-fluid text-center">
+        <p>&copy; GRUPO 1 - 2024 </p>
+        <p>Kevin Henriquez | Hernán Medina | Camila Palma | Bayron Sepulveda</p>
+    </footer>
+
+    <script src="assets/js/main.js"></script>
+    <!--Scripts Js -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <!--Bootstrap script-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
