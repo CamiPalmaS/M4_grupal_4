@@ -20,10 +20,16 @@ document.getElementById("verClima").addEventListener("submit", (event) =>{
 function mostrarInfo(data){
     if (data.cod ===200){
         const respuesta = `
-        <h2>Información del Clima en ${data.name}</h2>
-        <p>Temperatura: ${data.main.temp}°C</p>
-        <p>T° min: ${data.main.temp_min}°C</p>
-        <p>T° max: ${data.main.temp_max}°C</p>
+        <div class="card">
+            <div class="card-header bg-success text-white">
+                <h2>Información del Clima en ${data.name}</h2>
+            </div>
+            <div class="card-body">
+                <p class="lead">Temperatura: ${data.main.temp}°C</p>
+                <p>T° min: ${data.main.temp_min}°C</p>
+                <p>T° max: ${data.main.temp_max}°C</p>
+            </div>
+        </div>
         `;
     
         document.getElementById("infoClima").innerHTML = respuesta
