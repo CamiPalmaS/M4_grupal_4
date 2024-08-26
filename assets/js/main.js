@@ -21,7 +21,7 @@ function mostrarInfo(data){
     if (data.cod ===200){
         const respuesta = `
         <div class="card">
-            <div class="card-header bg-success text-white">
+            <div class="card-header bg-info text-white">
                 <h2>Información del Clima en ${data.name}</h2>
             </div>
             <div class="card-body">
