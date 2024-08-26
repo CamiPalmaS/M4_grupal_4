@@ -1,5 +1,7 @@
+//variable con la apikey
 const apikey = "e0c15b8e93223e5c828fbf46a5d20e5f";
 
+//funcion asincrona para obtener los datos del clima
 async function obtenerClima() {
     const ciudad = document.getElementById("nombreCiudad").value.trim();
     const pais = document.getElementById("nombrePais").value.trim();
@@ -14,12 +16,13 @@ async function obtenerClima() {
     return false;
     }, 2000)
 }
-
+//llamada a la funcion al oprimir el boton del formulario
 document.getElementById("verClima").addEventListener("submit", (event) =>{
     event.preventDefault();
     obtenerClima();  
 }) 
     
+//funcion para mostrar la información obtenida
 function mostrarInfo(data){
     if (data.cod ===200){
         const respuesta = `
