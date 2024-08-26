@@ -1,20 +1,23 @@
 const apikey = "e0c15b8e93223e5c828fbf46a5d20e5f";
 
-document.getElementById("verClima").addEventListener("submit", (event) =>{
-    event.preventDefault();
-
+async function obtenerClima() {
     const ciudad = document.getElementById("nombreCiudad").value.trim();
     const pais = document.getElementById("nombrePais").value.trim();
     const urlApi = `https://api.openweathermap.org/data/2.5/weather?q=${ciudad},${pais}&appid=${apikey}&units=metric&lang=es`;
     setTimeout(() =>{
         fetch(urlApi)
-    .then(response => response.json())
+    .then(response => response.json(), console.log("Información enviada"))
     .then(data => mostrarInfo(data), console.log(urlApi))
     .catch(error => {
         alert("Hubo un error: "+error);
     })
     return false;
     }, 2000)
+}
+
+document.getElementById("verClima").addEventListener("submit", (event) =>{
+    event.preventDefault();
+    obtenerClima();  
 }) 
     
 function mostrarInfo(data){
