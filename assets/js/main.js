@@ -1,4 +1,4 @@
-const apikey = "fdabdd0c45a343df4b7996272f0f0c77";
+const apikey = "e0c15b8e93223e5c828fbf46a5d20e5f";
 
 document.getElementById("verClima").addEventListener("submit", (event) =>{
     event.preventDefault();
